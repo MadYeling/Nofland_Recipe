@@ -1,42 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <LinearLayout
+    <!--            android:inputType="none"-->
+    <!--            android:focusable="false"-->
+    <SearchView
+        android:id="@+id/main_activity_item_name_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/main_activity_item_name_edit_text"
-            android:hint="此处输入物品名称"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/main_activity_search_button"
-            android:layout_marginStart="10dp"
-            android:text="搜索"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        android:layout_width="380dp"
-        android:layout_height="1dp" />
+        android:hint="点击此处进行搜索"
+        android:iconifiedByDefault="false" />
 
     <ListView
         android:id="@+id/main_activity_recipe_list_view"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 </LinearLayout>
