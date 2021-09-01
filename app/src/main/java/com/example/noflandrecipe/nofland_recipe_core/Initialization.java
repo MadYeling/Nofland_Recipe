@@ -354,14 +354,6 @@ public class Initialization {
         return EResearch.getByCNName(strResearch);
     }
 
-    public static List<Item> getItemList() {
-        return ITEM_LIST;
-    }
-
-    public static List<Recipe> getRecipeList() {
-        return RECIPE_LIST;
-    }
-
     public static List<Recipe> findRecipeByItem(String name) {
         List<Recipe> list = new ArrayList<>();
         for (Recipe recipe : RECIPE_LIST) {

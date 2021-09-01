@@ -2,7 +2,9 @@ package com.example.noflandrecipe.nofland_recipe_core.model;
 
 import com.example.noflandrecipe.nofland_recipe_core.etype.EResearch;
 
-public class RecipeItem {
+import java.io.Serializable;
+
+public class RecipeItem implements Serializable {
     /**
      * 素材物品
      */

@@ -3,10 +3,11 @@ package com.example.noflandrecipe.nofland_recipe_core.model;
 import com.example.noflandrecipe.nofland_recipe_core.etype.EHabitat;
 import com.example.noflandrecipe.nofland_recipe_core.etype.ERecipeType;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
-public class Recipe {
+public class Recipe implements Serializable {
     /**
      * 编号
      */
@@ -74,18 +75,18 @@ public class Recipe {
         return item;
     }
 
-    @Override
-    public String toString() {
-        return "Recipe{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", recipeType=" + recipeType +
-                ", habitat=" + habitat +
-                ", item=" + item +
-                ", Sell=" + Sell +
-                ", recovery=" + recovery +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Recipe{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", recipeType=" + recipeType +
+//                ", habitat=" + habitat +
+//                ", item=" + item +
+//                ", Sell=" + Sell +
+//                ", recovery=" + recovery +
+//                '}';
+//    }
 
     public Recipe haveThisItem(Item item) {
         for (RecipeItem ri : this.item) {

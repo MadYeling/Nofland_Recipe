@@ -4,7 +4,9 @@ import com.example.noflandrecipe.nofland_recipe_core.etype.ECollectPlace;
 import com.example.noflandrecipe.nofland_recipe_core.etype.EHabitat;
 import com.example.noflandrecipe.nofland_recipe_core.etype.EItemType;
 
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable {
     private final int id;
     private final String name;
     private final EItemType itemType;

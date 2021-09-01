@@ -1,6 +1,8 @@
 package com.example.noflandrecipe.nofland_recipe_core.model;
 
-public class RecipeRecovery {
+import java.io.Serializable;
+
+public class RecipeRecovery implements Serializable {
     /**
      * 一星
      */

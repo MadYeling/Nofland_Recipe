@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Nofland Recipe</string>
+    <string name="recipe_pic">配方的图片</string>
 </resources>
