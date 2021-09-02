@@ -373,6 +373,8 @@ public class Initialization {
 
     public static List<Item> DarkSearchItemsByName(String name) {
         List<Item> list = new ArrayList<>();
+        if ("".equals(name))
+            return list;
         for (Item item : ITEM_LIST) {
             if (item.getName().contains(name))
                 list.add(item);

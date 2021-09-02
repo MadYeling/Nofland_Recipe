@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.*;
 import com.example.noflandrecipe.nofland_recipe_core.EncodeFileName;
 import com.example.noflandrecipe.nofland_recipe_core.model.Recipe;
 
@@ -18,11 +16,13 @@ public class RecipeListAdapter extends BaseAdapter {
     private List<Recipe> list;
     private int resource;
     private LayoutInflater inflater;
+    private View welcomeImg;
 
-    public RecipeListAdapter(Context context, List<Recipe> list, int resource) {
+    public RecipeListAdapter(Context context, List<Recipe> list, View welcomeImg, int resource) {
         this.context = context;
         this.list = list;
         this.resource = resource;
+        this.welcomeImg = welcomeImg;
         inflater = LayoutInflater.from(context);
     }
 
@@ -63,6 +63,14 @@ public class RecipeListAdapter extends BaseAdapter {
             context.startActivity(intent);
         });
         return convertView;
+    }
+
+    @Override
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
+        welcomeImg.setVisibility(View.GONE);
+        if (list.size() == 0)
+            welcomeImg.setVisibility(View.VISIBLE);
     }
 
     private static class ViewHolder {

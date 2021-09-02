@@ -1,14 +1,12 @@
 package com.example.noflandrecipe;
 
+import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import com.example.noflandrecipe.nofland_recipe_core.EncodeFileName;
 import com.example.noflandrecipe.nofland_recipe_core.model.Recipe;
-
-import java.util.List;
 
 public class RecipeInfoActivity extends AppCompatActivity {
 
